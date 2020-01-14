@@ -1,0 +1,10 @@
+.pixel {
+  background-color: black;
+  width: 20px;
+  height: 20px;
+  float: left;
+}
+
+/* .pixel:hover {
+  background-color: white;
+} */
