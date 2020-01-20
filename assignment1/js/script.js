@@ -10,6 +10,7 @@ Artem Gloukhov
 window.onload = setup;
 
 let rotation = 0;
+let currentKey = "";
 
 function setup() {
 
