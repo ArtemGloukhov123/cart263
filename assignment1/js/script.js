@@ -23,6 +23,8 @@ function setup() {
     document.body.appendChild(pixel);
     //when the mouse hovers over the pixel, call the "paint" function
     pixel.addEventListener('mouseover', paint);
+    //add text to the pixel when the mouse hovers over it
+    pixel.addEventListener('mouseover', addText);
     //when the pixel is clicked, call the "remove" function
     pixel.addEventListener('click', remove);
   }
@@ -73,7 +75,13 @@ function rotate(e) {
   }
 }
 
+//Sets currentKey to the keycode of any key pressed
 function typed(e) {
   currentKey = e.keyCode;
   console.log(currentKey);
+}
+
+//add text to the pixel
+function addText(e) {
+  e.target.innerHTML = currentKey;
 }
