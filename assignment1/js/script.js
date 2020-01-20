@@ -31,8 +31,8 @@ function paint(e) {
   setTimeout(unpaint, 5000, e.target);
 }
 
-function unpaint(pix) {
-  pix.style.backgroundColor = 'black';
+function unpaint(e) {
+  e.style.backgroundColor = 'black';
 }
 
 function remove(e) {
@@ -53,5 +53,11 @@ function rotate(e) {
   if (e.keyCode === 39) {
     rotation += 1;
     console.log("RIGHT");
+  }
+  let pix = document.getElementsByClassName('pixel');
+  let rotationVal = "rotate(" + rotation + "deg)";
+
+  for (let i = 0; i < pix.length; i++) {
+    pix[i].style.transform = rotationVal;
   }
 }
