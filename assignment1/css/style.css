@@ -5,6 +5,9 @@
   float: left;
 }
 
-/* .pixel:hover {
-  background-color: white;
-} */
+.removedPixel {
+  background-color: black;
+  width: 20px;
+  height: 20px;
+  float: left;
+}

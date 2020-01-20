@@ -13,7 +13,7 @@ let rotation = 0;
 
 function setup() {
 
-  for(let i = 0; i < 1000; i++) {
+  for (let i = 0; i < 1000; i++) {
     let pixel = document.createElement('div');
     pixel.setAttribute('class', 'pixel');
 
@@ -21,6 +21,8 @@ function setup() {
     pixel.addEventListener('mouseover', paint);
     pixel.addEventListener('click', remove);
   }
+
+  document.addEventListener('keydown', rotate)
 }
 
 function paint(e) {
@@ -35,9 +37,21 @@ function unpaint(pix) {
 
 function remove(e) {
   e.target.style.backgroundColor = 'rgba(0,0,0,1)';
+  e.target.removeEventListener('mouseover', paint);
 }
 
 function random(maxVal) {
   let val = Math.random() * maxVal;
   return val;
+}
+
+function rotate(e) {
+  if (e.keyCode === 37) {
+    rotation -= 1;
+    console.log("LEFT");
+  }
+  if (e.keyCode === 39) {
+    rotation += 1;
+    console.log("RIGHT");
+  }
 }
