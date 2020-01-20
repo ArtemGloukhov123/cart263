@@ -9,6 +9,8 @@ Artem Gloukhov
 
 window.onload = setup;
 
+let rotation = 0;
+
 function setup() {
 
   for(let i = 0; i < 1000; i++) {
@@ -24,7 +26,7 @@ function setup() {
 function paint(e) {
   let rgbVal = "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")"
   e.target.style.backgroundColor = rgbVal;
-  setTimeout(unpaint, 2000, e.target);
+  setTimeout(unpaint, 5000, e.target);
 }
 
 function unpaint(pix) {
