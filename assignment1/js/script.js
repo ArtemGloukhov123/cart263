@@ -17,6 +17,7 @@ function setup() {
 
     document.body.appendChild(pixel);
     pixel.addEventListener('mouseover', paint);
+    pixel.addEventListener('click', remove);
   }
 }
 
@@ -28,6 +29,10 @@ function paint(e) {
 
 function unpaint(pix) {
   pix.style.backgroundColor = 'black';
+}
+
+function remove(e) {
+  e.target.style.backgroundColor = 'rgba(0,0,0,1)';
 }
 
 function random(maxVal) {
