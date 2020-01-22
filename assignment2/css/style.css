@@ -25,3 +25,16 @@ body {
   text-decoration: underline; /* underlined! */
   color: red; /* Emergency! */
 }
+
+.secret {
+  background-color: transparent;
+  color: black;
+  text-decoration: none;
+}
+
+.found {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}

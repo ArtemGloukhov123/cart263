@@ -2,22 +2,20 @@
 
 /*****************
 
-Raving Redactionist
-Pippin Barr
+Assignment 2
+Artem Gloukhov
 
-You are redacting a document, but it keeps becoming unredacted!
-Click the secret information to hide it, don't let all the
-secrets become revealed!
-
+Improved version of the Raving Redactionist
 ******************/
 
 // The chance a span will be revealed per update
 const REVEAL_POSSIBILITY = 0.1;
-// How often to update the spans (potentially revealing them)
+// How often to update the spans (potentially revealing them) in ms
 const UPDATE_FREQUENCY = 500;
 
 // A place to store the jQuery selection of all spans
 let $spans;
+let $secrets;
 
 // When the document is loaded we call the setup function
 $(document).ready(setup);
@@ -26,12 +24,17 @@ $(document).ready(setup);
 //
 // Sets the click handler and starts the time loop
 function setup() {
-  // Save the selection of all spans (since we do stuff to them multiple times)
-  $spans = $('span');
+  // Save the selection of all spans with class "redacted" (since we do stuff to them multiple times)
+  $spans = $('.redacted');
   // Set a click handler on the spans (so we know when they're clicked)
   $spans.on('click', spanClicked);
   // Set an interval of 500 milliseconds to update the state of the page
   setInterval(update, UPDATE_FREQUENCY);
+
+  //Save the spans with class "secret"
+  $secrets = $('.secret');
+  //Set a mouse over handler for them to be revealed
+  $secrets.on('mouseover', showSecretWord);
 };
 
 // spanClicked()
@@ -65,23 +68,10 @@ function updateSpan() {
   }
 }
 
-// A version using anonymous functions if you're interested:
-
-// $(document).ready(function () {
-//   $spans = $('span');
+//showSecretWord()
 //
-//   $spans.on('click',function () {
-//     $(this).removeClass('revealed');
-//     $(this).addClass('redacted');
-//   });
-//
-//   setInterval(function () {
-//     $spans.each(function () {
-//       let r = Math.random();
-//       if (r < REVEAL_POSSIBILITY) {
-//         $(this).removeClass('redacted');
-//         $(this).addClass('revealed');
-//       }
-//     });
-//   },UPDATE_FREQUENCY);
-// });
+//shows the word hidden withing the lorem ipsum phrase
+function showSecretWord() {
+  $(this).removeClass('secret');
+  $(this).addClass('found');
+}
