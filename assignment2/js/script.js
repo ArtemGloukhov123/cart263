@@ -88,5 +88,28 @@ function showSecretWord() {
 
   //Change the "Secrets Found" label to reflect the newly found secret word
   $('#secretsLabel').text('Secrets Found: ' + secretsFound + "/" + secretsTotal);
-  console.log(secretsFound);
-}
+
+  //
+  //reveal the word hidden in the lorem ipsum
+  if($(this).attr("id") === "1") {
+    $(this).text("THE");
+  }
+    if($(this).attr("id") === "2") {
+      $(this).text("ALL");
+    }
+      if($(this).attr("id") === "3") {
+        $(this).text("SEEING");
+      }
+        if($(this).attr("id") === "4") {
+          $(this).text("EYE");
+        }
+          if($(this).attr("id") === "5") {
+            $(this).text("IS");
+          }
+            if($(this).attr("id") === "6") {
+              $(this).text("WATCHING");
+            }
+              if($(this).attr("id") === "7") {
+                $(this).text("YOU");
+              }
+  }
