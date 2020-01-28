@@ -38,3 +38,17 @@ body {
   font-weight: bold;
   text-decoration: none;
 }
+
+#eye {
+  visibility: hidden;
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -100px;
+}
+
+div {
+  margin-left: auto;
+  margin-right: auto;
+}

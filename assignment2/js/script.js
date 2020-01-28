@@ -11,7 +11,7 @@ Improved version of the Raving Redactionist
 // The chance a span will be revealed per update
 const REVEAL_POSSIBILITY = 0.1;
 // How often to update the spans (potentially revealing them) in ms
-const UPDATE_FREQUENCY = 500;
+const UPDATE_FREQUENCY = 1000;
 
 // A place to store the jQuery selection of all spans
 let $spans;
@@ -112,4 +112,15 @@ function showSecretWord() {
               if($(this).attr("id") === "7") {
                 $(this).text("YOU");
               }
+    if(secretsFound === secretsTotal) {
+      ending();
+    }
   }
+
+function ending() {
+  $('p').css('color', 'white');
+  $('span').css({'color': 'white', 'background-color': 'transparent', 'text-decoration': 'none'});
+  $('body').css('background-color', 'black');
+  $('#eye').css('visibility', 'visible');
+  $('.found').css({'background-color': 'yellow', 'color': 'black'});
+}
