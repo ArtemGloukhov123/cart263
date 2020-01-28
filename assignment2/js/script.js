@@ -15,7 +15,12 @@ const UPDATE_FREQUENCY = 500;
 
 // A place to store the jQuery selection of all spans
 let $spans;
+//selection of all spans labeled "secret"
 let $secrets;
+//amount of secret words found by the user
+let secretsFound = 0;
+//the total amount of secret words
+let secretsTotal = 7;
 
 // When the document is loaded we call the setup function
 $(document).ready(setup);
@@ -72,6 +77,16 @@ function updateSpan() {
 //
 //shows the word hidden withing the lorem ipsum phrase
 function showSecretWord() {
+  //only counts the secret word found once.
+  if($(this).attr("class") === "secret") {
+    secretsFound ++;
+  }
+
+  //change the class of the secret word to "found", which highlights it
   $(this).removeClass('secret');
   $(this).addClass('found');
+
+  //Change the "Secrets Found" label to reflect the newly found secret word
+  $('#secretsLabel').text('Secrets Found: ' + secretsFound + "/" + secretsTotal);
+  console.log(secretsFound);
 }
