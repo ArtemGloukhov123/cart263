@@ -1,3 +1,79 @@
 body {
 
 }
+
+#background {
+  position: absolute;
+  z-index: 1;
+}
+
+#conveyor {
+  position: absolute;
+  z-index: 2;
+  width: 1000px;
+  margin-top: 30px;
+}
+
+#conveyorMoving {
+  position: absolute;
+  z-index: 3;
+  width: 1000px;
+  margin-top: 30px;
+  visibility: hidden;
+}
+
+#boxOpen {
+  position: absolute;
+  z-index: 3;
+  top: 300px;
+  left: 670px;
+  visibility: visible;
+}
+
+#boxClosed {
+  position: absolute;
+  z-index: 2;
+  top: 300px;
+  left: 670px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+#phone {
+  position: absolute;
+  width: 130px;
+  z-index: 4;
+  top: 300px;
+  left: 300px;
+  visibility: visible;
+}
+
+#phoneImage {
+  position: sticky;
+}
+
+#modules {
+  position: absolute;
+  width: 130px;
+  top: 50px;
+  left: -200px;
+}
+
+.module {
+  position: relative;
+  z-index: 5;
+  display: block;
+  float: left;
+  visibility: visible;
+  margin: 7px;
+}
+
+
+
+#clock {
+  position: absolute;
+  z-index: 5;
+  width: 200px;
+  top: 20px;
+  left: 800px;
+}

@@ -2,41 +2,79 @@
 
 /********************************************************************
 
-Title of Project
-Author Name
+Sweatshop Worker Simulator
+Artem Gloukhov
 
-This is a template. Fill in the title, author, and this description
-to match your project! Write JavaScript to do amazing things below!
+You are an unfortunate soul assembling smartphomes for Banana(TM), a phone company
+who uses sweatshop workers for cheap labor.
 
 *********************************************************************/
-let $fly;
-let $mouth;
+let $module;
+let $phone;
+let $box;
 
 
 $(document).ready(setup);
 
 function setup() {
-  $fly = $('#fly');
-  $mouth = $('#mouth');
+  $module = $('.module');
+  $phone = $('#phone');
+  $box = $('#boxOpen');
 
-  $fly.draggable();
-  $mouth.droppable({
-    drop: onDrop
+  $module.draggable();
+  $phone.draggable();
+  $phone.droppable({
+    drop: function(event,ui) {
+      $phone.append(ui.draggable);
+      ui.draggable.css({
+        top: -170,
+        left: 5
+      })
+    }
   });
+  $box.droppable({
+    drop: dropPhone
+  });
+  moveConveyorBelt();
 }
 
-function onDrop(event, ui) {
-  ui.draggable.remove();
-  $(this).attr('src', 'assets/images/mouth-closed.png');
-  setInterval(chew, 500);
-  console.log("dropped");
+function moveConveyorBelt() {
+  $("#conveyorMoving").css("visibility", "visible");
+  $("#modules").css("left", "-200px")
+  $("#modules").animate({
+    left: "450px"
+  }, 4500, "linear");
+  setTimeout(stopConveyorBelt, 4500);
+
+  $(".modules").append($("#module1"));
+  $(".modules").append($("#module2"));
+  $(".modules").append($("#module3"));
+  $(".modules").append($("#module4"));
 }
 
-function chew() {
-  console.log($mouth.attr("src"));
-  if($mouth.attr("src") === "assets/images/mouth-open.png") {
-    $mouth.attr("src", "assets/images/mouth-closed.png");
-  } else {
-    $mouth.attr("src", "assets/images/mouth-open.png");
-  }
+function stopConveyorBelt() {
+  $("#conveyorMoving").css("visibility", "hidden");
+}
+
+function dropPhone() {
+  $("#boxClosed").css("visibility", "visible");
+  $("#boxOpen").css("visibility", "hidden");
+  $phone.css("visibility", "hidden");
+  moveConveyorBelt();
+  setTimeout(openBox, 1000);
+  setTimeout(newPhone, 1000);
+}
+
+function openBox() {
+  $("#boxOpen").css("visibility", "visible");
+  $("#boxClosed").css("visibility", "hidden");
+}
+
+function newPhone() {
+    $phone.css("left", "-200px")
+    $phone.css("top", "300px")
+    $phone.css("visibility", "visible")
+    $phone.animate({
+      left: "300px"
+    }, 800,);
 }
