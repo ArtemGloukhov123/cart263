@@ -25,15 +25,15 @@ let clockSound = new Audio("/assets/sounds/clock.mp3");
 $(document).ready(setup);
 
 function setup() {
+  alert("Assemble the phone by placing the modules onto the motherboard, then place the phone into the box for shipment.")
+  $("#buyFood").on("click", noMoney);
+  $modules = $("#modules");
+
   lightSound.loop = true;
   lightSound.play();
 
   clockSound.loop = true;
   clockSound.play();
-
-  alert("Assemble the phone by placing the modules onto the motherboard, then place the phone into the box for shipment.")
-  $("#buyFood").on("click", noMoney);
-  $modules = $("#modules");
 
   createModules();
   moveConveyorBelt();
