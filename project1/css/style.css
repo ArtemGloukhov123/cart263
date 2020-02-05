@@ -81,3 +81,41 @@ body {
   top: 20px;
   left: 800px;
 }
+
+#payDiv {
+  position: absolute;
+  top: 530px;
+  left: 10px;
+
+}
+
+.yourPay {
+  position: relative;
+  z-index: 2;
+  font-size: 30px;
+  font-family: fantasy;
+  color: green;
+  display: block;
+  float: left;
+}
+
+#yourPay2 {
+  position: relative;
+  z-index: 2;
+  font-size: 30px;
+  font-family: fantasy;
+  color: green;
+  display: block;
+  float: left;
+}
+
+#buyFood {
+  position: relative;
+  display: block;
+  float: left;
+  z-index: 2;
+  font-size: 20px;
+  font-weight: bold;
+  top: 33px;
+  left: 10px;
+}

@@ -14,9 +14,12 @@ let $phone;
 let $box;
 let $modules;
 
+let pay = 0;
+
 $(document).ready(setup);
 
 function setup() {
+  $("#buyFood").on("click", noMoney);
   $modules = $("#modules");
 
   createModules();
@@ -50,8 +53,6 @@ function moveConveyorBelt() {
     left: "350px"
   }, 4500, "linear");
   setTimeout(stopConveyorBelt, 4500);
-
-
 }
 
 function stopConveyorBelt() {
@@ -66,6 +67,14 @@ function dropPhone() {
   moveConveyorBelt();
   setTimeout(openBox, 1000);
   setTimeout(newPhone, 1000);
+
+  if(pay > 0.04){
+    pay = 0;
+  }
+
+  pay += 0.01;
+  $("#yourPay2").html(pay);
+
 
 }
 
@@ -102,4 +111,8 @@ function createModules() {
     $module = $('.module');
     $module.draggable();
   }
+}
+
+function noMoney() {
+  console.log("YOU HAVE NO MONEY");
 }
