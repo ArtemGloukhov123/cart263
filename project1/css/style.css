@@ -1,6 +1,4 @@
-body {
-
-}
+body {}
 
 #background {
   position: absolute;
@@ -72,8 +70,6 @@ body {
   margin: 7px;
 }
 
-
-
 #clock {
   position: absolute;
   z-index: 5;
@@ -86,7 +82,6 @@ body {
   position: absolute;
   top: 530px;
   left: 10px;
-
 }
 
 .yourPay {
