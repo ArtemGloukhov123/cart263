@@ -19,6 +19,7 @@ let pay = 0;
 $(document).ready(setup);
 
 function setup() {
+  alert("Assemble the phone by placing the modules onto the motherboard, then place the phone into the box for shipment.")
   $("#buyFood").on("click", noMoney);
   $modules = $("#modules");
 
@@ -70,15 +71,14 @@ function dropPhone() {
 
   pay += 0.01;
   $("#yourPay2").html(pay);
+}
 
+function openBox() {
   if(pay > 0.04){
     pay = 0;
     $("#yourPay2").html(pay);
     alert("The shipment was lost in transit and you are not paid.");
   }
-}
-
-function openBox() {
   $("#boxOpen").css("visibility", "visible");
   $("#boxClosed").css("visibility", "hidden");
   setTimeout(createModules, 1);
