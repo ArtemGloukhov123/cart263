@@ -68,14 +68,14 @@ function dropPhone() {
   setTimeout(openBox, 1000);
   setTimeout(newPhone, 1000);
 
-  if(pay > 0.04){
-    pay = 0;
-  }
-
   pay += 0.01;
   $("#yourPay2").html(pay);
 
-
+  if(pay > 0.04){
+    pay = 0;
+    $("#yourPay2").html(pay);
+    alert("The shipment was lost in transit and you are not paid.");
+  }
 }
 
 function openBox() {
@@ -114,5 +114,5 @@ function createModules() {
 }
 
 function noMoney() {
-  console.log("YOU HAVE NO MONEY");
+  alert("You do not have enough money for food. Get back to work.")
 }
