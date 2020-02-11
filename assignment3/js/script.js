@@ -147,9 +147,17 @@ let animals = [
   ];
 
 let answers = [];
-const NUM_OPTIONS = 5;
+const NUM_OPTIONS = 10;
 let correctAnimal;
 let numOfCorrectAnswers = 0;
+let correctSpeeches = [
+"Congrats. You somehow got that right.",
+"Maybe you're not as dumb as I thought.",
+"Took you long enough.",
+"Pat yourself on the back.",
+"Not bad for someone like you.",
+"That one was too easy"
+];
 
 $(document).ready(setup);
 
@@ -185,9 +193,17 @@ function handleGuess() {
     $(".guess").remove();
 
     numOfCorrectAnswers += 1;
-    setTimeout(newRound, 1000);
+    responsiveVoice.speak(correctSpeech(), "UK English Male", {
+      rate: 1,
+      pitch: 0.9
+    });
+    setTimeout(newRound, 3000);
   } else {
     $(this).effect("shake");
+    responsiveVoice.speak("You idiot, that was wrong. What i said was", "UK English Male", {
+      pitch: 0.7,
+      rate: 0.9
+    });
     sayBackwards(correctAnimal);
     numOfCorrectAnswers = 0;
     displayCorrectGuesses();
@@ -208,4 +224,9 @@ function displayCorrectGuesses() {
   $p.addClass("correctGuesses");
   $p.text("Correct Guesses: " + numOfCorrectAnswers);
   $p.appendTo("body");
+}
+
+function correctSpeech() {
+  let randomSpeech = correctSpeeches[(Math.floor(Math.random() * correctSpeeches.length))];
+  return randomSpeech;
 }

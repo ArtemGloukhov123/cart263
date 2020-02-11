@@ -1,23 +1,16 @@
 body {
-
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%, rgba(9,9,121,1) 100%);
 }
 
-#button {
-  position: absolute;
-  left: 40%;
-  top: 100px;
-
-  width: 200px;
-  height: 100px;
-
-  font-size: 25px;
-  font-family: fantasy;
-
+.guess {
+  margin: 3px; 
 }
 
-.buttons {
-  display: block;
-  float: left;
-  width: auto;
-  background-color: red;
+.correctGuesses {
+  font-family: monospace;
+  font-size: 20px;
+  margin-left: 3px;
+  color: white;
+  font-weight: 1000;
 }
