@@ -1,0 +1,23 @@
+body {
+
+}
+
+#button {
+  position: absolute;
+  left: 40%;
+  top: 100px;
+
+  width: 200px;
+  height: 100px;
+
+  font-size: 25px;
+  font-family: fantasy;
+
+}
+
+.buttons {
+  display: block;
+  float: left;
+  width: auto;
+  background-color: red;
+}
