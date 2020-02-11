@@ -156,14 +156,15 @@ let correctSpeeches = [
 "Took you long enough.",
 "Pat yourself on the back.",
 "Not bad for someone like you.",
-"That one was too easy"
+"That one was too easy",
+"Your victory means nothing"
 ];
 
 $(document).ready(setup);
 
 
 function setup() {
-  newRound();
+  $(".startButton").on("click", announce);
 }
 
 function addButton(label) {
@@ -229,4 +230,12 @@ function displayCorrectGuesses() {
 function correctSpeech() {
   let randomSpeech = correctSpeeches[(Math.floor(Math.random() * correctSpeeches.length))];
   return randomSpeech;
+}
+
+function announce() {
+    $(".startButton").remove();
+
+    responsiveVoice.speak("Okay human, here's the deal. I will say the name of an animal backwards, and you have to guess which animal that is. If you can. which i doubt", "UK English Male");
+
+    setTimeout(newRound, 11000);
 }
