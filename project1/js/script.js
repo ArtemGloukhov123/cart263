@@ -22,11 +22,11 @@ let $modules;
 let pay = 0;
 
 //sounds
-let clickSound = new Audio("/assets/sounds/click.mp3");
-let lightSound = new Audio("/assets/sounds/light.mp3");
-let boxSound = new Audio("/assets/sounds/box.mp3");
-let conveyorSound = new Audio("/assets/sounds/conveyor.mp3");
-let clockSound = new Audio("/assets/sounds/clock.mp3");
+let clickSound = new Audio("assets/sounds/click.mp3");
+let lightSound = new Audio("assets/sounds/light.mp3");
+let boxSound = new Audio("assets/sounds/box.mp3");
+let conveyorSound = new Audio("assets/sounds/conveyor.mp3");
+let clockSound = new Audio("assets/sounds/clock.mp3");
 
 //run setup when document is loaded
 $(document).ready(setup);
