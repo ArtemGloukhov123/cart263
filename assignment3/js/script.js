@@ -175,7 +175,8 @@ if (annyang) {
   // variable names means that annyang will call the function
   // specified with EVERYTHING it heard from that point on...
   var command = {
-    "I give up": giveUp
+    "I give up": giveUp,
+    "Say it again": repeat
   };
 
   // Now we've defined the commands we give them to annyang
@@ -278,4 +279,8 @@ function giveUp() {
 
   numOfCorrectAnswers = 0;
   setTimeout(newRound, 4000);
+}
+
+function repeat() {
+  sayBackwards(correctAnimal);
 }
