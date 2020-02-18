@@ -10,154 +10,154 @@ to match your project! Write JavaScript to do amazing things below!
 
 *********************************************************************/
 let animals = [
-    "aardvark",
-    "alligator",
-    "alpaca",
-    "antelope",
-    "ape",
-    "armadillo",
-    "baboon",
-    "badger",
-    "bat",
-    "bear",
-    "beaver",
-    "bison",
-    "boar",
-    "buffalo",
-    "bull",
-    "camel",
-    "canary",
-    "capybara",
-    "cat",
-    "chameleon",
-    "cheetah",
-    "chimpanzee",
-    "chinchilla",
-    "chipmunk",
-    "cougar",
-    "cow",
-    "coyote",
-    "crocodile",
-    "crow",
-    "deer",
-    "dingo",
-    "dog",
-    "donkey",
-    "dromedary",
-    "elephant",
-    "elk",
-    "ewe",
-    "ferret",
-    "finch",
-    "fish",
-    "fox",
-    "frog",
-    "gazelle",
-    "gila monster",
-    "giraffe",
-    "gnu",
-    "goat",
-    "gopher",
-    "gorilla",
-    "grizzly bear",
-    "ground hog",
-    "guinea pig",
-    "hamster",
-    "hedgehog",
-    "hippopotamus",
-    "hog",
-    "horse",
-    "hyena",
-    "ibex",
-    "iguana",
-    "impala",
-    "jackal",
-    "jaguar",
-    "kangaroo",
-    "koala",
-    "lamb",
-    "lemur",
-    "leopard",
-    "lion",
-    "lizard",
-    "llama",
-    "lynx",
-    "mandrill",
-    "marmoset",
-    "mink",
-    "mole",
-    "mongoose",
-    "monkey",
-    "moose",
-    "mountain goat",
-    "mouse",
-    "mule",
-    "muskrat",
-    "mustang",
-    "mynah bird",
-    "newt",
-    "ocelot",
-    "opossum",
-    "orangutan",
-    "oryx",
-    "otter",
-    "ox",
-    "panda",
-    "panther",
-    "parakeet",
-    "parrot",
-    "pig",
-    "platypus",
-    "polar bear",
-    "porcupine",
-    "porpoise",
-    "prairie dog",
-    "puma",
-    "rabbit",
-    "raccoon",
-    "ram",
-    "rat",
-    "reindeer",
-    "reptile",
-    "rhinoceros",
-    "salamander",
-    "seal",
-    "sheep",
-    "shrew",
-    "silver fox",
-    "skunk",
-    "sloth",
-    "snake",
-    "squirrel",
-    "tapir",
-    "tiger",
-    "toad",
-    "turtle",
-    "walrus",
-    "warthog",
-    "weasel",
-    "whale",
-    "wildcat",
-    "wolf",
-    "wolverine",
-    "wombat",
-    "woodchuck",
-    "yak",
-    "zebra"
-  ];
+  "aardvark",
+  "alligator",
+  "alpaca",
+  "antelope",
+  "ape",
+  "armadillo",
+  "baboon",
+  "badger",
+  "bat",
+  "bear",
+  "beaver",
+  "bison",
+  "boar",
+  "buffalo",
+  "bull",
+  "camel",
+  "canary",
+  "capybara",
+  "cat",
+  "chameleon",
+  "cheetah",
+  "chimpanzee",
+  "chinchilla",
+  "chipmunk",
+  "cougar",
+  "cow",
+  "coyote",
+  "crocodile",
+  "crow",
+  "deer",
+  "dingo",
+  "dog",
+  "donkey",
+  "dromedary",
+  "elephant",
+  "elk",
+  "ewe",
+  "ferret",
+  "finch",
+  "fish",
+  "fox",
+  "frog",
+  "gazelle",
+  "gila monster",
+  "giraffe",
+  "gnu",
+  "goat",
+  "gopher",
+  "gorilla",
+  "grizzly bear",
+  "ground hog",
+  "guinea pig",
+  "hamster",
+  "hedgehog",
+  "hippopotamus",
+  "hog",
+  "horse",
+  "hyena",
+  "ibex",
+  "iguana",
+  "impala",
+  "jackal",
+  "jaguar",
+  "kangaroo",
+  "koala",
+  "lamb",
+  "lemur",
+  "leopard",
+  "lion",
+  "lizard",
+  "llama",
+  "lynx",
+  "mandrill",
+  "marmoset",
+  "mink",
+  "mole",
+  "mongoose",
+  "monkey",
+  "moose",
+  "mountain goat",
+  "mouse",
+  "mule",
+  "muskrat",
+  "mustang",
+  "mynah bird",
+  "newt",
+  "ocelot",
+  "opossum",
+  "orangutan",
+  "oryx",
+  "otter",
+  "ox",
+  "panda",
+  "panther",
+  "parakeet",
+  "parrot",
+  "pig",
+  "platypus",
+  "polar bear",
+  "porcupine",
+  "porpoise",
+  "prairie dog",
+  "puma",
+  "rabbit",
+  "raccoon",
+  "ram",
+  "rat",
+  "reindeer",
+  "reptile",
+  "rhinoceros",
+  "salamander",
+  "seal",
+  "sheep",
+  "shrew",
+  "silver fox",
+  "skunk",
+  "sloth",
+  "snake",
+  "squirrel",
+  "tapir",
+  "tiger",
+  "toad",
+  "turtle",
+  "walrus",
+  "warthog",
+  "weasel",
+  "whale",
+  "wildcat",
+  "wolf",
+  "wolverine",
+  "wombat",
+  "woodchuck",
+  "yak",
+  "zebra"
+];
 
 let answers = [];
 const NUM_OPTIONS = 10;
 let correctAnimal;
 let numOfCorrectAnswers = 0;
 let correctSpeeches = [
-"Congrats. You somehow got that right.",
-"Maybe you're not as dumb as I thought.",
-"Took you long enough.",
-"Pat yourself on the back.",
-"Not bad for someone like you.",
-"That one was too easy",
-"Your victory means nothing"
+  "Congrats. You somehow got that right.",
+  "Maybe you're not as dumb as I thought.",
+  "Took you long enough.",
+  "Pat yourself on the back.",
+  "Not bad for someone like you.",
+  "That one was too easy",
+  "Your victory means nothing"
 ];
 
 $(document).ready(setup);
@@ -165,6 +165,26 @@ $(document).ready(setup);
 
 function setup() {
   $(".startButton").on("click", announce);
+}
+
+if (annyang) {
+
+  // Add the commands to annyang. That is it should listen
+  // for "I am..." or "I'm..." followed by some number of words.
+  // In annyang's commands an asterisk (*) followed by a
+  // variable names means that annyang will call the function
+  // specified with EVERYTHING it heard from that point on...
+  var command = {
+    "I give up": giveUp
+  };
+
+  // Now we've defined the commands we give them to annyang
+  // by using its .addCommands() function.
+  annyang.addCommands(command);
+
+  // Finally we tell annyang to start listening with its
+  // .start() function
+  annyang.start();
 }
 
 function addButton(label) {
@@ -178,6 +198,10 @@ function addButton(label) {
 
 function newRound() {
   answers = [];
+
+  $(".guess").remove();
+  $(".answer").remove();
+
   for (let i = 0; i < NUM_OPTIONS; i++) {
     let randomAnimal = animals[Math.floor(Math.random() * animals.length)];
     addButton(randomAnimal);
@@ -190,7 +214,7 @@ function newRound() {
 }
 
 function handleGuess() {
-  if($(this).text() === correctAnimal) {
+  if ($(this).text() === correctAnimal) {
     $(".guess").remove();
 
     numOfCorrectAnswers += 1;
@@ -233,9 +257,25 @@ function correctSpeech() {
 }
 
 function announce() {
-    $(".startButton").remove();
+  $(".startButton").remove();
 
-    responsiveVoice.speak("Okay human, here's the deal. I will say the name of an animal backwards, and you have to guess which animal that is. If you can. which i doubt", "UK English Male");
+  responsiveVoice.speak("Okay human, try to guess what animal I am saying backwards", "UK English Male");
 
-    setTimeout(newRound, 11000);
+  setTimeout(newRound, 5000);
+}
+
+function giveUp() {
+  responsiveVoice.speak("I knew you would. This was the correct answer", "UK English Male");
+
+  $(".guess").remove();
+
+  let $answer = $("<p></p>");
+  $answer.addClass("answer");
+  $answer.text(correctAnimal);
+  $answer.appendTo("body");
+
+  displayCorrectGuesses();
+
+  numOfCorrectAnswers = 0;
+  setTimeout(newRound, 4000);
 }

@@ -27,3 +27,11 @@ body {
   font-size: 35px;
   font-family: monospace;
 }
+
+.answer {
+  font-family: monospace;
+  font-size: 40px;
+  margin-left: 3px;
+  color: white;
+  font-weight: 1000;
+}
