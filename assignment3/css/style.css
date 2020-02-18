@@ -35,3 +35,18 @@ body {
   color: white;
   font-weight: 1000;
 }
+
+#instructions {
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+
+  text-align: center;
+
+  font-family: monospace;
+  font-size: 18px;
+  margin-left: 3px;
+  color: grey;
+  font-weight: 1000;
+  visibility: hidden;
+}
