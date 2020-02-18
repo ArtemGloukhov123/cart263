@@ -176,7 +176,8 @@ if (annyang) {
   // specified with EVERYTHING it heard from that point on...
   var command = {
     "I give up": giveUp,
-    "Say it again": repeat
+    "Say it again": repeat,
+    "I think it is *spokenGuess": handleSpokenGuess
   };
 
   // Now we've defined the commands we give them to annyang
@@ -226,6 +227,27 @@ function handleGuess() {
     setTimeout(newRound, 3000);
   } else {
     $(this).effect("shake");
+    responsiveVoice.speak("You idiot, that was wrong. What i said was", "UK English Male", {
+      pitch: 0.7,
+      rate: 0.9
+    });
+    sayBackwards(correctAnimal);
+    numOfCorrectAnswers = 0;
+    displayCorrectGuesses();
+  }
+}
+
+function handleSpokenGuess(spokenGuess) {
+  if (spokenGuess === correctAnimal) {
+    $(".guess").remove();
+
+    numOfCorrectAnswers += 1;
+    responsiveVoice.speak(correctSpeech(), "UK English Male", {
+      rate: 1,
+      pitch: 0.9
+    });
+    setTimeout(newRound, 3000);
+  } else {
     responsiveVoice.speak("You idiot, that was wrong. What i said was", "UK English Male", {
       pitch: 0.7,
       rate: 0.9
