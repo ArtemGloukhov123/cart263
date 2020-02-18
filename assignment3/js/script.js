@@ -226,7 +226,7 @@ function handleGuess() {
     });
     setTimeout(newRound, 3000);
   } else {
-    $(this).effect("shake");
+    $(this).remove();
     responsiveVoice.speak("You idiot, that was wrong. What i said was", "UK English Male", {
       pitch: 0.7,
       rate: 0.9
