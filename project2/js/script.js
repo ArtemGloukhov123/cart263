@@ -55,6 +55,8 @@ function setup() {
 function playGame() {
   $("button").remove();
 
+  $("#talking").css("visibility", "hidden");
+
   if (counter < 3) {
     introduction();
   } else {
@@ -167,6 +169,7 @@ function addPhrase(label) {
 
   //makes a new phrase as soon as the current one is finished being spoken
   responsiveVoice.speak(label, "UK English Female", {
+    onstart: speak,
     onend: playGame
   });
 
@@ -175,7 +178,9 @@ function addPhrase(label) {
   window.scrollTo(0,document.body.scrollHeight);
 }
 
-
+function speak() {
+  $("#talking").css("visibility", "visible");
+}
 
 
 //source for word arrays:
