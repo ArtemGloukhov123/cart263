@@ -29,7 +29,24 @@ function loaded(data) {
     verb = "are";
   }
 
-  createPhrase(randomCondiment, verb, randomCat, randomRoom);
+  let indefiniteArticle = "a";
+  if(randomCat.charAt(0) === "A") {
+    indefiniteArticle = "an";
+  }
+  if(randomCat.charAt(0) === "E") {
+    indefiniteArticle = "an";
+  }
+  if(randomCat.charAt(0) === "I") {
+    indefiniteArticle = "an";
+  }
+  if(randomCat.charAt(0) === "O") {
+    indefiniteArticle = "an";
+  }
+  if(randomCat.charAt(0) === "U") {
+    indefiniteArticle = "an";
+  }
+
+  createPhrase(randomCondiment, verb, indefiniteArticle, randomCat, randomRoom);
 }
 
 function notLoaded(request, text, error) {
@@ -41,8 +58,8 @@ function getRandomArrayElement(array) {
   return element;
 }
 
-function createPhrase(condiment, verb, cat, room) {
-  let phrase = `${condiment} ${verb} like a ${cat} in the ${room}`;
+function createPhrase(condiment, verb, indefiniteArticle, cat, room) {
+  let phrase = `${condiment} ${verb} like ${indefiniteArticle} ${cat} in the ${room}.`;
 
   let $p = $("<p></p>");
   $p.addClass("phrase");
