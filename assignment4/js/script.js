@@ -12,6 +12,12 @@ to match your project! Write JavaScript to do amazing things below!
 $(document).ready(setup);
 
 function setup() {
+  getJSONdata();
+
+  $(document).on("click", refreshPage);
+}
+
+function getJSONdata() {
   $.getJSON("data/data.json")
     .done(loaded)
     .fail(notLoaded);
@@ -65,4 +71,10 @@ function createPhrase(condiment, verb, indefiniteArticle, cat, room) {
   $p.addClass("phrase");
   $p.text(phrase);
   $p.appendTo("body");
+}
+
+function refreshPage() {
+  $(".phrase").remove();
+
+  getJSONdata();
 }
