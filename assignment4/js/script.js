@@ -30,6 +30,10 @@ function loaded(data) {
   let randomCat = getRandomArrayElement(data.cats);
   let randomRoom = getRandomArrayElement(data.rooms);
   let randomRabbit = getRandomArrayElement(data.rabbits);
+  let randomGod = getRandomArrayElement(data.gods);
+  let randomGoddess = getRandomArrayElement(data.goddesses);
+  let randomMovie = getRandomArrayElement(data.popularMovies);
+  let randomSport = getRandomArrayElement(data.sports);
 
   let verb = "is";
   if (randomCondiment.charAt(randomCondiment.length - 1) === "s") {
@@ -39,7 +43,7 @@ function loaded(data) {
   let indefiniteArticle = getCorrectIndefiniteArticle(randomCat);
   let indefiniteArticle2 = getCorrectIndefiniteArticle(randomRabbit);
 
-  createPhrase(randomCondiment, verb, indefiniteArticle, randomCat, indefiniteArticle2, randomRabbit, randomRoom);
+  createPhrase(randomCondiment, verb, indefiniteArticle, randomCat, indefiniteArticle2, randomRabbit, randomRoom, randomGod, randomGoddess, randomMovie, randomSport);
 }
 
 function notLoaded(request, text, error) {
@@ -72,8 +76,8 @@ function getRandomArrayElement(array) {
   return element;
 }
 
-function createPhrase(condiment, verb, indefiniteArticle, cat, indefiniteArticle2, rabbit, room) {
-  let phrase = `${condiment} ${verb} like ${indefiniteArticle} ${cat} cat chasing ${indefiniteArticle2} ${rabbit} rabbit in the ${room}.`;
+function createPhrase(condiment, verb, indefiniteArticle, cat, indefiniteArticle2, rabbit, room, god, goddess, movie, sport) {
+  let phrase = `${condiment} ${verb} like ${indefiniteArticle} ${cat} cat chasing ${indefiniteArticle2} ${rabbit} rabbit in the ${room}, whilst ${god} and ${goddess} ponder whether to watch ${movie} or ${sport} on TV.`;
 
   let $p = $("<p></p>");
   $p.addClass("phrase");
