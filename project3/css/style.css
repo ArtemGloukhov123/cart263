@@ -1,3 +1,26 @@
 body {
-  
+  background-image: url("../assets/images/paper.png");
+  background-repeat: repeat;
+  text-align: center;
+
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#leader {
+  position: relative;
+  height: 600px;
+}
+
+#link{
+  position: relative;
+  top: -450px;
+  z-index: -1;
+
+  font-size: 15px;
+}
+
+#websites{
+  text-align: left;
 }

@@ -8,10 +8,13 @@ Artem Gloukhov
 
 
 *********************************************************************/
+let $leader;
 
 //run setup when document is loaded
 $(document).ready(setup);
 
 function setup() {
+$leader = $("#leader");
 
+$leader.draggable();
 }
