@@ -2,6 +2,7 @@ body {
   text-align: center;
   margin: 0px;
   background-color: rgb(237, 240, 245);
+  font-family: sans-serif;
 }
 
 .banner{
@@ -41,6 +42,11 @@ body {
 }
 
 #signIn{
+  position: relative;
+
+  top: 10px;
+  right: 65px;
+
   padding: 10px;
   width: 150px;
   background-color: lightgreen;
@@ -55,6 +61,39 @@ body {
   font-family: sans-serif;
   font-size: 12px;
 
-  top: -25px;
+  top: -20px;
   left: 65px;
+}
+
+#textField{
+  max-width: 80%;
+  min-width: 80%;
+}
+
+#passwordRecoveryText{
+  width: 80%;
+
+  text-align: left;
+
+  font-family: sans-serif;
+
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#submit{
+
+}
+
+#back{
+  margin-bottom: 30px;
+}
+
+#charAmount{
+  position: relative;
+  left: 540px;
+  top: -60px;
+
+  width: 100px;
 }
