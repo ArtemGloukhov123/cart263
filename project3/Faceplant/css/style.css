@@ -24,6 +24,9 @@ body {
 
 #info{
   position: relative;
+
+  text-align: center;
+
   margin-left: auto;
   margin-right: auto;
 
@@ -45,7 +48,7 @@ body {
   position: relative;
 
   top: 10px;
-  right: 65px;
+  right: 45px;
 
   padding: 10px;
   width: 150px;
@@ -61,8 +64,10 @@ body {
   font-family: sans-serif;
   font-size: 12px;
 
-  top: -20px;
-  left: 65px;
+  top: -30px;
+  left: 145px;
+
+  width: 30px;
 }
 
 #textField{
@@ -92,7 +97,7 @@ body {
 
 #charAmount{
   position: relative;
-  left: 540px;
+  right: -80%;
   top: -60px;
 
   width: 100px;
