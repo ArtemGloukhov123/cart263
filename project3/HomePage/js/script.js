@@ -14,6 +14,10 @@ let $leader;
 $(document).ready(setup);
 
 function setup() {
+  $("#close").on("click", function(){
+    window.location.href = "../Desktop/Desktop.html";
+  });
+  document.getElementById("close").style.cursor = "pointer";
 $leader = $("#leader");
 
 $leader.draggable();
