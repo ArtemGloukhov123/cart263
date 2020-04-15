@@ -8,8 +8,6 @@ Artem Gloukhov
 
 
 *********************************************************************/
-let visibilityVal = "hidden";
-
 //run setup when document is loaded
 $(document).ready(setup);
 
@@ -20,14 +18,10 @@ function setup() {
   });
   //open image when image icon is clicked
   $("#imagediv").on("click", openPicture);
-  //open start menu when start button is clicked
-  $("#start").on("click", toggleMenu);
 
   //have the cursor change to a pointer when mousing over the icons
   document.getElementById("internetdiv").style.cursor = "pointer";
   document.getElementById("imagediv").style.cursor = "pointer";
-  //same with the start button
-  document.getElementById("start").style.cursor = "pointer";
 }
 
 function openPicture() {
@@ -66,13 +60,4 @@ function openPicture() {
     top: Math.random() * ($(window).height() - $dialog.parent().height()),
     left: Math.random() * ($(window).width() - $dialog.parent().width())
   });
-}
-
-function toggleMenu() {
-  //if the menu is hidden, show it when start is clicked. If showing, hide it.
-  if($("#startmenu").css("visibility") === "hidden"){
-    $("#startmenu").css("visibility", "visible");
-  } else {
-    $("#startmenu").css("visibility", "hidden");
-  }
 }

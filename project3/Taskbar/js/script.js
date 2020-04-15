@@ -16,7 +16,7 @@ $(document).ready(setup);
 function setup() {
   //display start button at bottom left of screen
   let startButton = document.createElement('img');
-  startButton.setAttribute('src', 'assets/images/startbutton.png');
+  startButton.setAttribute('src', '../Taskbar/assets/images/startbutton.png');
   startButton.setAttribute('id', 'start');
 
   document.body.appendChild(startButton);
@@ -26,6 +26,8 @@ function setup() {
   $('#start').css('left', '-10px');
   $('#start').css('bottom', '0px');
   $('#start').css('z-index', '2');
+
+  document.getElementById("start").style.cursor = "pointer";
 
   //display task bar at bottom of screen
   let taskBar = document.createElement('div');
@@ -44,7 +46,7 @@ function setup() {
 
   //create hidden picture of start menu
   let startMenu = document.createElement('img');
-  startMenu.setAttribute('src', 'assets/images/startmenu.png');
+  startMenu.setAttribute('src', '../Taskbar/assets/images/startmenu.png');
   startMenu.setAttribute('id', 'startmenu');
 
   document.body.appendChild(startMenu);
