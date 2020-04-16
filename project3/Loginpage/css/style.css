@@ -1,0 +1,17 @@
+body {
+text-align: center;
+}
+
+#logindiv{
+  margin: auto;
+  margin-top: 200px;
+
+  text-align: left;
+  padding: 5px;
+  width: 200px;
+  background-color: red;
+}
+
+p{
+  margin-bottom: 5px;
+}
