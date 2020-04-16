@@ -66,4 +66,16 @@ function setup() {
       $("#startmenu").css("visibility", "hidden");
     }
   });
+
+  //have start button highlighted when hovered over
+  if ($("#startmenu").css("visibility") === "hidden") {
+    $('#start').hover(function() {
+      $('#start').css('filter', 'brightness(1.2)');
+    });
+    //have the brightness return to normal when mouse leaves the button
+    $('#start').mouseleave(function() {
+      $('#start').css('filter', 'brightness(1)');
+    });
+  }
+
 }
