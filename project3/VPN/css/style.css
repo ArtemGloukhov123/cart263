@@ -1,3 +1,33 @@
 body {
+  overflow: hidden;
+  text-align: center;
+}
 
+#logo{
+  position: absolute;
+  left: 5px;
+  top: 10px;
+
+  width: 250px;
+}
+
+#map{
+  margin-top: 30px;
+}
+
+#button{
+  position: absolute;
+  top: 45%;
+  left: 35%;
+  width: 400px;
+
+  background: rgb(57,232,46);
+  background: linear-gradient(180deg, rgba(57,232,46,1) 13%, rgba(36,149,46,1) 71%);
+
+  font-family: monospace;
+  font-size: 25px;
+  color: white;
+
+  padding: 15px;
+  border-radius: 15px;
 }
