@@ -63,8 +63,9 @@ function checkPassword() {
   } else if (lname === "") {
     alert("Enter your last name.");
   } else if (pass === password) {
-    alert("Access Granted");
+    localStorage.setItem("firstNameVal", fname);
+    window.location.href = "FaceplantHomepage.html";
   } else {
-    alert("Access DENIED");
+    alert("Incorrect Password");
   }
 }
