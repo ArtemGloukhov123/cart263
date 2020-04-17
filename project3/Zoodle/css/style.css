@@ -8,6 +8,22 @@ text-align: center;
   top: 180px;
 }
 
+#smalllogo{
+  position: absolute;
+  top: 50px;
+  left: 20px;
+
+  width: 100px;
+}
+
+#searchbar{
+  position: absolute;
+  top: 55px;
+  left: 145px;
+
+  width: 500px;
+}
+
 #inputField{
   position: relative;
   top: 220px;

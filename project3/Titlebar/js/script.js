@@ -42,5 +42,4 @@ $("#close").on("click", function(){
 });
 //display pointer cursor when hovering over close button
 document.getElementById("close").style.cursor = "pointer";
-$leader = $("#leader");
 }

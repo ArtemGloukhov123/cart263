@@ -14,5 +14,14 @@ Artem Gloukhov
 $(document).ready(setup);
 
 function setup() {
+  $('.button').on('click', search);
+}
 
+function search(){
+  let searchTerm = document.getElementById('inputField').value;
+  localStorage.setItem("searchTermVal", searchTerm);
+
+  if(searchTerm !== "blank"){
+    window.location.href = 'Searchpage.html';
+  }
 }
