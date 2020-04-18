@@ -1,37 +1,75 @@
 body {
-text-align: center;
+  text-align: center;
+  margin: 0px;
+  overflow: hidden;
+  font-family: sans-serif;
 }
 
-#logo{
+hr{
+  position: absolute;
+  top: 100px;
+  width: 100%;
+}
+
+#logo {
   position: relative;
   width: 300px;
   top: 180px;
 }
 
-#smalllogo{
+#smalllogo {
   position: absolute;
   top: 50px;
   left: 20px;
-
   width: 100px;
 }
 
-#searchbar{
+#searchbar {
   position: absolute;
   top: 55px;
   left: 145px;
-
   width: 500px;
 }
 
-#inputField{
+#inputField {
   position: relative;
   top: 220px;
-
   width: 300px;
 }
 
-.button{
+.button {
   position: relative;
   top: 250px;
+}
+
+#searchresults {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.result {
+  margin: 10px;
+  width: 90%;
+  height: auto;
+  text-align: left;
+  margin-left: 30px;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+.title {
+  font-size: 20px;
+  margin-bottom: -12px;
+  color: blue;
+}
+
+.title:hover{
+  text-decoration: underline;
+}
+
+.description {
+  font-size: 16px;
 }
