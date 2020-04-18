@@ -39,6 +39,7 @@ $('#close').css('right', '4px');
 //return to desktop when window is closed
 $("#close").on("click", function(){
   window.location.href = "../Desktop/Desktop.html";
+  localStorage.removeItem('hasVPN');
 });
 //display pointer cursor when hovering over close button
 document.getElementById("close").style.cursor = "pointer";
