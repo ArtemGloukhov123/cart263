@@ -14,7 +14,7 @@ $(document).ready(setup);
 function setup() {
   //go to internet page when internet icon is clicked
   $("#internetdiv").on("click", function() {
-    window.location.href = "../Homepage/Homepage.html";
+    window.location.href = "../HomePage/HomePage.html";
   });
   //open image when image icon is clicked
   $("#imagediv").on("click", openPicture);

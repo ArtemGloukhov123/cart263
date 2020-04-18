@@ -25,6 +25,6 @@ function displayLogo() {
   $('#smallLogo').css('position', 'absolute');
   $('#smallLogo').css('top', '35px');
   $('#smallLogo').css('right', '5px');
-  $('#smallLogo').css('width', '40px');
+  $('#smallLogo').css('width', '30px');
   $('#smallLogo').css('opacity', '0.5');
 }
