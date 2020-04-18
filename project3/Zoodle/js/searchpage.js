@@ -57,7 +57,7 @@ function displaySearchResults() {
           window.location.href = 'https://globalnews.ca/news/6821056/coronavirus-china-pandemic-6-days/';
         });
 
-        $('#description1').html("The Leader warned the public on the seventh day, Jan. 20. But by that time, more than 3,000 people had been infected during almost a week of public silence ...");
+        $('#description1').html("3 days ago - The Leader warned the public on the seventh day, Jan. 20. But by that time, more than 3,000 people had been infected during almost a week of public silence ...");
 
         $('#title2').html("How the Nation's propaganda is reframing the coronavirus narrative");
 
@@ -74,7 +74,7 @@ function displaySearchResults() {
           window.location.href = 'https://www.essentiallysports.com/animal-crossing-banned-in-china-after-in-game-protests-esports-news-hong-kong-2020/';
         });
 
-        $('#description1').html("Protestors take to Animal Crossing. The residents of Hong-Kong had taken to vehemently protest against the Chinese government for months ...");
+        $('#description1').html("1 day ago - Protestors take to Animal Crossing. The residents of Hong-Kong had taken to vehemently protest against the Chinese government for months ...");
 
         $('#title2').html("Animal Crossing game removed from sale in China over Hong Kong democracy messages");
 
@@ -102,40 +102,45 @@ function displaySearchResults() {
         $('#description2').html("Jun 29, 2018 - The long read: Before Xi Jinping, the internet was becoming a more vibrant political space for Chinese citizens. But today the country has the ...");
         break;
     }
+    document.getElementById("title1").style.cursor = "pointer";
+    document.getElementById("title2").style.cursor = "pointer";
   } else {
     let caseNum = getCaseNum();
     switch (caseNum) {
       case 0:
-        $('#title1').html("");
+        $('#title1').html("Great Leader makes ¥7,500,000 donation to feed poorer communities");
 
-        $('#description1').html("");
+        $('#description1').html("1 day ago - Earlier today, our Great Leader personally delivered a check worth ¥7,500,000 to feed those in less wealthy communities. As always, efforts are made to keep this nation the best it can be ...");
 
-        $('#title2').html("");
+        $('#title2').html("Great efforts made by Great Leader to fight off Western devils");
 
-        $('#description2').html("");
+        $('#description2').html("Mar 20, 2020 - Great Leader active in the fight against Western forces trying to ruin our great nation through propaganda and war. Many such attempts include brainwashing, trying to make Great Leader look bad ...");
         break;
       case 1:
-        $('#title1').html("");
+        $('#title1').html("People all over Great Nation gather in happiness over elimination of Coronavirus");
 
-        $('#description1').html("");
+        $('#description1').html("Apr 12, 2020 - The nation's best doctors have successfully stopped all spread of the disease and men, women, and children of all ages are as happy as they could be, gathering in the streets, laughing, playing, and dancing ...");
 
-        $('#title2').html("");
+        $('#title2').html("COVID-19 Possibly Sent from the West, Great Leader says");
 
-        $('#description2').html("");
+        $('#description2').html("3 days ago - Although the American devils have sent this biological weapon into our nation in order to stop our commerce, our great doctors were able to cure it ... ");
         break;
       case 2:
-        $('#title1').html("");
+        $('#title1').html("American propaganda to be stopped in video games");
 
-        $('#description1').html("");
+        $('#description1').html("2 days ago - Recent games such as the latest Animal Crossing have been featuring the possibility of American propaganda, trying to brainwash children into believing their lies. A bill may be passed so as to ...");
 
         $('#title2').html("");
 
         $('#description2').html("");
         break;
       case 3:
+        $('#didyoumean').html("Did you mean: ")
+        $('#suggestion').html("Great Wall of China?")
+
         $('#title1').html("");
 
-        $('#description1').html("");
+        $('#description1').html("Your search - Great Firewall - did not match any documents.");
 
         $('#title2').html("");
 
@@ -143,8 +148,7 @@ function displaySearchResults() {
         break;
     }
   }
-  document.getElementById("title1").style.cursor = "pointer";
-  document.getElementById("title2").style.cursor = "pointer";
+
 }
 
 function getCaseNum() {
