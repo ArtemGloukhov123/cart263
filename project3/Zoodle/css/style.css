@@ -86,3 +86,10 @@ hr {
   font-style: italic;
   color: blue;
 }
+
+#backtohomepage{
+  position: absolute;
+
+  top: 500px;
+  left: calc(50% - 65px);
+}

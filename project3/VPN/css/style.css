@@ -26,7 +26,7 @@ body {
 }
 
 #button{
-  margin-top: 290px;
+  margin-top: 310px;
   margin-bottom: 100px;
 
   width: 400px;
@@ -46,4 +46,18 @@ body {
 
 #backtohomepage{
   position: relative;
+}
+
+#description{
+  position: absolute;
+  top: 100px;
+  left: calc(50% - 250px);
+
+  width: 500px;
+  height: 200px;
+
+  font-family: sans-serif;
+  color: rgb(100, 100, 100);
+  font-size: 20px;
+  font-weight: bold;
 }

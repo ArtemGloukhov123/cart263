@@ -123,8 +123,124 @@ body {
 
 #greeting{
   position: relative;
-  top: 0px;
+  top: -50px;
   font-family: sans-serif;
   font-size: 18px;
-  color: rgb(60, 90, 153);
+  color: white;//rgb(60, 90, 153);
 }
+
+#friends{
+  position: absolute;
+  top: 105px;
+  left: 10px;
+
+  height: calc(100% - 150px);
+  width: 20%;
+
+  background-color: white;
+  border: 1px solid grey;
+}
+
+#chat{
+  position: absolute;
+  top: 105px;
+  left: calc(20% + 20px);
+
+  height: calc(100% - 210px);
+  width: calc(80% - 30px);
+
+  background-color: white;
+  border: 1px solid grey;
+
+  padding-top: 60px;
+}
+
+#chatheader{
+  position: absolute;
+  left: -1px;
+  top: -1px;
+
+  height: 45px;
+  width: 100%;
+
+  background-color: white;
+  border: 1px solid grey;
+}
+
+#chatinput{
+  position: absolute;
+  bottom: -1px;
+  left: -1px;
+
+  font-size: 20px;
+
+  height: 45px;
+  width: calc(100% - 100px);
+}
+
+#send{
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+
+  height: 51px;
+  width: 100px;
+}
+
+#photo{
+  position: absolute;
+  left: 15px;
+  top: 5px;
+  width: 35px;
+}
+
+#username{
+  position: absolute;
+  left: 60px;
+  font-weight: bold;
+}
+
+.message{
+  position: relative;
+  left: 10px;
+  background-color: rgb(241,240,240);
+  border-radius: 20px;
+
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  display: block;
+  float: left;
+
+  margin-top: 5px;
+
+  text-align: left;
+}
+
+#recieved{
+  position: absolute;
+  left: 0px;
+  top: 45px;
+
+  width: 40%;
+  height: 100%;
+}
+
+#sent{
+  position: absolute;
+  right: 0px;
+  top: 45px;
+
+  width: 50%;
+  height: 100%;
+}
+
+#backtohomepage{
+  position: absolute;
+
+  top: 500px;
+  left: calc(50% - 65px);
+}
+

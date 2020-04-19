@@ -58,3 +58,11 @@ p {
   left: 35%;
   visibility: hidden;
 }
+
+#backtohomepage{
+  position: absolute;
+
+  top: 500px;
+  left: calc(50% - 65px);
+}
+

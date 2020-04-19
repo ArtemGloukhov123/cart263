@@ -10,7 +10,7 @@ Artem Gloukhov
 *********************************************************************/
 let textFieldChars;
 
-let password = "GloryToOurLeader45";
+let password = "GloryToLeader45";
 
 //run setup when document is loaded
 $(document).ready(setup);
@@ -64,6 +64,7 @@ function checkPassword() {
     alert("Enter your last name.");
   } else if (pass === password) {
     localStorage.setItem("firstNameVal", fname);
+    localStorage.setItem("lastNameVal", lname);
     window.location.href = "FaceplantHomepage.html";
   } else {
     alert("Incorrect Password");
