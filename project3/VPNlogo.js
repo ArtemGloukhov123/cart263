@@ -27,4 +27,5 @@ function displayLogo() {
   $('#smallLogo').css('right', '5px');
   $('#smallLogo').css('width', '30px');
   $('#smallLogo').css('opacity', '0.5');
+  $('#smallLogo').css('z-index', '3');
 }

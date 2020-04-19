@@ -55,6 +55,7 @@ function setup() {
   $('#startmenu').css('left', '0px');
   $('#startmenu').css('bottom', '35px');
   $('#startmenu').css('visibility', 'hidden');
+  $('#startmenu').css('z-index', '3');
 
 
   //open start menu when start button is clicked

@@ -24,6 +24,7 @@ document.body.appendChild(titleBar);
 $('#titlebar').css('position', 'fixed');
 $('#titlebar').css('top', '0px');
 $('#titlebar').css('left', '0px');
+$('#titlebar').css('z-index', '3');
 
 //display the minimize/close buttons at the top right of the screen
 let close = document.createElement('img');
@@ -35,6 +36,7 @@ document.body.appendChild(close);
 $('#close').css('position', 'fixed');
 $('#close').css('top', '4px');
 $('#close').css('right', '4px');
+$('#close').css('z-index', '4');
 
 //return to desktop when window is closed
 $("#close").on("click", function(){
