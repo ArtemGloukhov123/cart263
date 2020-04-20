@@ -97,7 +97,7 @@ function addMessageToChat(messageToBeSent) {
 function errorMessage(){
   // Dynamically create a div and store it in a variable. This is the div
   // we will turn into a dialog box. Set its title at the same time.
-  let $dialog = $(`<div id='dialogdiv'></div>`).attr(`title`, `family.png`);
+  let $dialog = $(`<div id='dialogdiv'></div>`).attr(`title`, `The End`);
 
   //add an image to the body of the dialog box
   $dialog.append(`<p>You were caught and promptly arrested by the Nation's authorities for using unauthorized software and attempting contact outside the country.`);

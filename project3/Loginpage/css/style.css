@@ -54,8 +54,8 @@ p {
 
 #magicword {
   position: absolute;
-  top: 5%;
-  left: 35%;
+  top: calc(50% - 303px);
+  left: calc(50% - 160px);
   visibility: hidden;
 }
 
@@ -65,4 +65,3 @@ p {
   top: 500px;
   left: calc(50% - 65px);
 }
-
