@@ -97,10 +97,6 @@ body {
   margin-right: auto;
 }
 
-#submit{
-
-}
-
 #back{
   margin-bottom: 30px;
 }
@@ -133,6 +129,9 @@ body {
   position: absolute;
   top: 105px;
   left: 10px;
+
+  text-align: center;
+  padding: 0px;
 
   height: calc(100% - 150px);
   width: 20%;
@@ -252,4 +251,20 @@ body {
   width: 60px;
 
   visibility: hidden;
+}
+
+.friend{
+  position: relative;
+  height: 40px;
+  width: 90%;
+
+  margin: 10px;
+  background-color: lightgrey;
+  border-radius: 20px;
+}
+
+.status{
+  position: absolute;
+  top: -4px;
+  left: 60px;
 }
