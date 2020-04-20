@@ -22,22 +22,17 @@ $(document).ready(setup);
 
 function setup() {
 
-  //creates a greeting for the user at the top of the page, with their name
-  let greeting = document.createElement('p');
-  greeting.setAttribute('id', 'greeting');
-
-  document.body.appendChild(greeting);
-
-  $('#greeting').html('Hello, ' + fname);
-
   //if the user does not have the VPN, run the usual code
   //if the VPN has already been gotten, lock down faceplant and end the experience
 
   //find out if VPN is active
   let hasVPN = localStorage.getItem("hasVPN");
 
-  if(hasVPN !== "true"){
-    setTimeout(recieveMessage, 3000);
+  if (hasVPN !== "true") {
+    
+    //make a greeting, so user interacts with page so sound can play
+    let greeting = "Hello " + fname;
+    dialogBox(greeting);
   } else {
     //remove non-essential divs
     $('#photo').remove();
@@ -84,7 +79,7 @@ function recieveMessage() {
   }
   addMessageToChat(msg);
   messageSound.play();
-  
+
   //have a delay between each message
   if (num < 5) {
     setTimeout(recieveMessage, 2000);
@@ -113,7 +108,7 @@ function addMessageToChat(messageToBeSent) {
 }
 
 //displays a message, signifying the end of the interactive experience
-function errorMessage(){
+function errorMessage() {
 
   //create a div to be turn into a dialog box
   let $dialog = $(`<div id='dialogdiv'></div>`).attr(`title`, `The End`);
@@ -127,9 +122,9 @@ function errorMessage(){
   //turn the div into a dialog box
   $dialog.dialog({
 
-  //add a button to take the user to the ending screen
+    //add a button to take the user to the ending screen
     buttons: {
-      "End experience" : function() {
+      "End experience": function() {
         window.location.href = "../Ending/Ending.html";
       }
     },
@@ -137,6 +132,40 @@ function errorMessage(){
     //contain within body
     containment: 'body',
     width: 600
+  });
+
+  $dialog.parent().offset({
+    top: 0.5 * ($(window).height() - $dialog.parent().height()),
+    left: 0.5 * ($(window).width() - $dialog.parent().width())
+  });
+}
+
+//create a dialog box as an error message
+function dialogBox(text) {
+
+  //create a div to be turn into a dialog box
+  let $dialog = $(`<div id='dialogdiv'></div>`).attr(`title`, `Greetings`);
+
+  //add text to the div
+  $dialog.append(`<p>${text}</p>`);
+
+  //Add the div to the page
+  $('body').append($dialog);
+
+  //turn the div into a dialog box
+  $dialog.dialog({
+
+    //add a button to take the user to the ending screen
+    buttons: {
+      "Close": function() {
+        setTimeout(recieveMessage, 3000);
+        $(this).dialog(`close`);
+      }
+    },
+
+    //contain within body
+    containment: 'body',
+    width: 300
   });
 
   $dialog.parent().offset({
