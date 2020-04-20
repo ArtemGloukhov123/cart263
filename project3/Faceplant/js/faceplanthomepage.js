@@ -8,6 +8,8 @@ Artem Gloukhov
 
 
 *********************************************************************/
+let messageSound = new Audio("../sounds/message.mp3");
+
 //needed for giving recieved messages individual id's
 let num = 0;
 
@@ -81,7 +83,8 @@ function recieveMessage() {
       break;
   }
   addMessageToChat(msg);
-
+  messageSound.play();
+  
   //have a delay between each message
   if (num < 5) {
     setTimeout(recieveMessage, 2000);

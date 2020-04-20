@@ -8,6 +8,8 @@ Artem Gloukhov
 
 
 *********************************************************************/
+let errorSound = new Audio("../sounds/error.mp3");
+
 //amount of characters entered in the text field
 let textFieldChars;
 
@@ -75,6 +77,7 @@ function checkPassword() {
 
 //create a dialog box as an error message
 function dialogBox(text) {
+  errorSound.play();
 
   //create a div to be turn into a dialog box
   let $dialog = $(`<div id='dialogdiv'></div>`).attr(`title`, `Error`);
