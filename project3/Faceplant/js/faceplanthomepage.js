@@ -29,17 +29,18 @@ function setup() {
   let hasVPN = localStorage.getItem("hasVPN");
 
   if (hasVPN !== "true") {
-    
+
     //make a greeting, so user interacts with page so sound can play
     let greeting = "Hello " + fname;
     dialogBox(greeting);
   } else {
     //remove non-essential divs
-    $('#photo').remove();
+    $('.photo').remove();
     $('#username').remove();
     $('#chatinput').remove();
     $('#send').remove();
     $('#chatheader').remove();
+    $('.friend').remove();
 
     //display blocks of grey
     $('#chat').css('background-color', 'grey');
