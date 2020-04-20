@@ -15,6 +15,7 @@ function setup() {
   }
 }
 
+//create div and assign it to the top right corner of the screen
 function displayLogo() {
   let logo = document.createElement('img');
   logo.setAttribute('src', '../VPN/assets/images/VPNlogo.png');

@@ -4,33 +4,41 @@
 
 Glorious Nation Internet Simulator
 Artem Gloukhov
-
-
-
 *********************************************************************/
+
+//retrieve item searched for in previous page
 let searchTerm = localStorage.getItem("searchTermVal");
+
+//check if VPN is active, search results change if it is
 let vpnVal = localStorage.getItem('hasVPN');
 
 //run setup when document is loaded
 $(document).ready(setup);
 
 function setup() {
+  //return to Zoodle's home page if icon in search page is pressed
   $('#smalllogo').on('click', function() {
     window.location.href = 'Zoodle.html';
   });
 
+  //change cursor to pointer to show that icon is clickable
   document.getElementById("smalllogo").style.cursor = "pointer";
 
+  //rewrite searched term in textbox at top of page
   document.getElementById('searchbar').value = searchTerm;
-
 
   displaySearchResults();
 }
 
 //displays different search results depending on whether the user got the VPN or not
 function displaySearchResults() {
+
+  //if VPN is active show real life articles about censorship in China
   if (vpnVal === "true") {
+
+    //each search term is a different case number
     let caseNum = getCaseNum();
+
     switch (caseNum) {
       case 0:
         $('#title1').html("Letter: Just to clarify, the Leader is a dictator");
@@ -50,6 +58,7 @@ function displaySearchResults() {
         $('#description2').html("2 days ago - China Reportedly Bans Online Gaming and Chats After Animal Crossing Mishap. (Photo : Photo by Stem List on Unsplash) TOTAL BAN?:");
 
         break;
+
       case 1:
         $('#title1').html("Coronavirus: The nation's officials didn’t warn public of likely pandemic for 6 days");
 
@@ -67,6 +76,7 @@ function displaySearchResults() {
 
         $('#description2').html("Mar 16, 2020 - How the nation's propaganda is reframing the coronavirus narrative. As new cases of COVID-19 drop, experts say Beijing has started to ...");
         break;
+
       case 2:
         $('#title1').html("Animal Crossing Banned in China After In-Game Protests");
 
@@ -84,6 +94,7 @@ function displaySearchResults() {
 
         $('#description2').html("Apr. 13, 2020 - The Nintendo Switch game, Animal Crossing: New Horizons, has been removed from sale on websites in China, after it was used by Hong ...");
         break;
+
       case 3:
         $('#title1').html("China's great firewall and the war to control the internet");
 
@@ -102,9 +113,12 @@ function displaySearchResults() {
         $('#description2').html("Jun 29, 2018 - The long read: Before Xi Jinping, the internet was becoming a more vibrant political space for Chinese citizens. But today the country has the ...");
         break;
     }
+    //switch cursor to pointer so titles look like links
     document.getElementById("title1").style.cursor = "pointer";
     document.getElementById("title2").style.cursor = "pointer";
   } else {
+
+    //search results for when VPN is not active, show propaganda
     let caseNum = getCaseNum();
     switch (caseNum) {
       case 0:
@@ -116,6 +130,7 @@ function displaySearchResults() {
 
         $('#description2').html("Mar 20, 2020 - Great Leader active in the fight against Western forces trying to ruin our great nation through propaganda and war. Many such attempts include brainwashing, trying to make Great Leader look bad ...");
         break;
+
       case 1:
         $('#title1').html("People all over Great Nation gather in happiness over elimination of Coronavirus");
 
@@ -125,6 +140,7 @@ function displaySearchResults() {
 
         $('#description2').html("3 days ago - Although the American devils have sent this biological weapon into our nation in order to stop our commerce, our great doctors were able to cure it ... ");
         break;
+
       case 2:
         $('#title1').html("American propaganda to be stopped in video games");
 
@@ -134,6 +150,7 @@ function displaySearchResults() {
 
         $('#description2').html("");
         break;
+
       case 3:
         $('#didyoumean').html("Did you mean: ")
         $('#suggestion').html("Great Wall of China?")
@@ -151,6 +168,7 @@ function displaySearchResults() {
 
 }
 
+//assign a number to each search term for the switch statement
 function getCaseNum() {
   let caseNum;
 

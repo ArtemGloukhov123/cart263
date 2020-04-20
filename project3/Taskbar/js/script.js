@@ -1,12 +1,10 @@
 "use strict";
 
 /********************************************************************
+Task bar
 
-Glorious Nation Internet Simulator
-Artem Gloukhov
-
-
-
+This document is for linking in html files that need a task bar at the bottom
+of the page, more elegant than rewriting the code each time.
 *********************************************************************/
 
 
@@ -19,6 +17,7 @@ function setup() {
   startButton.setAttribute('src', '../Taskbar/assets/images/startbutton.png');
   startButton.setAttribute('id', 'start');
 
+  //append to body
   document.body.appendChild(startButton);
 
   $('#start').css('position', 'absolute');

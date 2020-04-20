@@ -1,12 +1,8 @@
 "use strict";
 
 /********************************************************************
-
-Glorious Nation Internet Simulator
-Artem Gloukhov
-
-
-
+Title bar
+Same as the task bar, but for the title bar at the top of the screen.
 *********************************************************************/
 
 

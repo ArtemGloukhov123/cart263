@@ -35,10 +35,9 @@ function checkLoginInfo() {
   } else {
     magicWord();
   }
-
-
 }
 
+//display a reference to a certain dino movie
 function magicWord(){
   $('#magicword').css('visibility', 'visible');
 

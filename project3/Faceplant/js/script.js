@@ -8,8 +8,10 @@ Artem Gloukhov
 
 
 *********************************************************************/
+//amount of characters entered in the text field
 let textFieldChars;
 
+//password for entering the website
 let password = "GloryToLeader45";
 
 //run setup when document is loaded
@@ -44,9 +46,9 @@ function submit() {
   textFieldChars = $("#textField").val().length;
 
   if (textFieldChars < 1000) {
-    alert("You have not fulfilled the required character count. Do as told, or risk corporal punishment.")
+    dialogBox("You have not fulfilled the required character count. Do as told, or risk corporal punishment.")
   } else {
-    alert(`Our gracious leader is merciful and has granted you access to your account. Your password is "${password}".`)
+    dialogBox(`Our gracious leader is merciful and has granted you access to your account. Your password is "${password}".`)
   }
 }
 
@@ -59,14 +61,47 @@ function checkPassword() {
 
   //checks that all fields are entered correctly
   if (fname === "") {
-    alert("Enter your first name.");
+    dialogBox("Enter your first name.");
   } else if (lname === "") {
-    alert("Enter your last name.");
+    dialogBox("Enter your last name.");
   } else if (pass === password) {
     localStorage.setItem("firstNameVal", fname);
     localStorage.setItem("lastNameVal", lname);
     window.location.href = "FaceplantHomepage.html";
   } else {
-    alert("Incorrect Password");
+    dialogBox("Incorrect Password");
   }
+}
+
+//create a dialog box as an error message
+function dialogBox(text) {
+
+  //create a div to be turn into a dialog box
+  let $dialog = $(`<div id='dialogdiv'></div>`).attr(`title`, `Error`);
+
+  //add text to the div
+  $dialog.append(`<p>${text}</p>`);
+
+  //Add the div to the page
+  $('body').append($dialog);
+
+  //turn the div into a dialog box
+  $dialog.dialog({
+
+    //add a button to take the user to the ending screen
+    buttons: {
+      "Close": function() {
+        $(this).dialog(`close`);
+      }
+    },
+
+    //contain within body
+    containment: 'body',
+    width: 300
+  });
+
+  $dialog.parent().offset({
+    top: 0.5 * ($(window).height() - $dialog.parent().height()),
+    left: 0.5 * ($(window).width() - $dialog.parent().width())
+  });
 }

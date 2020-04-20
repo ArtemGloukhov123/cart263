@@ -12,7 +12,6 @@ Artem Gloukhov
 $(document).ready(setup);
 
 function setup() {
-let $leader = $("#leader");
-
-$leader.draggable();
+//make the picture draggable
+$("#leader").draggable();
 }
