@@ -47,7 +47,7 @@ function openPicture() {
   // Finally, use .offset() on the .parent() of the dialog in order to give it a random position on the screen.
   // Uses .height() and .width() to get the dimensions of elements, including the window.
   $dialog.parent().offset({
-    top: Math.random() * ($(window).height() - $dialog.parent().height()),
-    left: Math.random() * ($(window).width() - $dialog.parent().width())
+    top: 0.5 * ($(window).height() - $dialog.parent().height()),
+    left: 0.5 * ($(window).width() - $dialog.parent().width())
   });
 }
